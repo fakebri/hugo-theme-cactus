@@ -87,9 +87,10 @@
   </div>
 </body>
 
-<link rel="stylesheet" href={{ "/lib/font-awesome/css/all.min.css" | relURL }}>
-<script src={{ "/lib/jquery/jquery.min.js" | relURL }}></script>
-<script src={{ "/js/main.js" | relURL }}></script>
+<link rel="stylesheet" rel="preload" href="https://cdn.staticfile.org/font-awesome/6.2.0/css/all.min.css">
+<script src="https://cdn.staticfile.org/jquery/3.6.1/jquery.min.js" defer></script>
+<script src={{ "js/main.js" | relURL }} defer></script>
+<script src="https://cdn.staticfile.org/instant.page/5.1.1/instantpage.min.js" async></script>
 {{ if not (isset site.Params "disablecopy") }}
 <script src={{ "js/code-copy.js"  | relURL }}></script>
 {{ end }}
